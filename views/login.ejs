@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <title>login</title>
+
+
+</head>
+
+<body>
+    <div class="login_main">
+        <h3 class="heading">Login</h3>
+        <div class="login_abc">
+            <form action="/login" method="POST" class="def">
+                <% if (success_message != ''){%>
+                    <div class="alert alert-dismissible alert-danger ">
+                        <button type="button" class="btn-close num" data-bs-dismiss="alert"></button>
+                        <strong> <%= success_message%> </strong>
+                    </div>
+                    <% } %>
+                        <% if ( error != ''){%>
+                            <div class="alert alert-dismissible alert-danger ">
+                                <button type="button" class="btn-close num" data-bs-dismiss="alert"></button>
+                                <strong> <%= error%> </strong>
+                            </div>
+                            <% } %>
+                                <div class="form-group">
+                                    <p>Enter Your Email Id</p>
+                                    <input type="email" class="form-control" name="email" id="username" autocomplete="off" placeholder="Email">
+                                </div>
+
+
+                                <div class="form-group">
+                                    <p>Enter Your Password</p>
+                                    <input type="password" class="form-control" name="password" id="password" autocomplete="off" placeholder="Password">
+                                </div>
+
+                                <div class="form-group" id="login_btn">
+                                    <input type="submit" class="btn" value=" Login ">
+                                </div>
+                                <p id=" login_text ">Already Registered ? <a class=" login_card-link " href="/ ">Register Now</a> </p>
+            </form>
+        </div>
+    </div>
+    <script src=" https://code.jquery.com/jquery-3.6.0.slim.js " integrity=" sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin=" anonymous ">
+    </script>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity=" sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin=" anonymous ">
+    </script>
+</body>
+
+</html>
